@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Iron Leaf Engravings",
+  title: "Iron Hide Supplies",
   description: "",
   icons: {
     icon: "/favicon/IronLeafFav.ico",
