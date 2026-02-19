@@ -1,0 +1,204 @@
+/* Page BG similar to screenshot: dark + soft amber glow */
+.page {
+  min-height: 100vh;
+  background:
+    radial-gradient(900px 380px at 50% 55%, rgba(212, 140, 58, 0.18), transparent 55%),
+    radial-gradient(700px 250px at 50% 75%, rgba(212, 140, 58, 0.10), transparent 60%),
+    radial-gradient(900px 500px at 50% 0%, rgba(255, 255, 255, 0.05), transparent 55%),
+    var(--bg-main, #1c1c1c);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 56px 20px 96px;
+}
+
+.hero {
+  text-align: center;
+  margin: 20px 0 34px;
+}
+
+.title {
+  margin: 0;
+  font-size: clamp(2.1rem, 4vw, 3.1rem);
+  letter-spacing: 0.02em;
+  color: var(--amber, #d48c3a);
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.55);
+}
+
+.subtitle {
+  margin: 12px auto 0;
+  max-width: 720px;
+  font-size: 1.15rem;
+  color: rgba(224, 228, 232, 0.96);
+  line-height: 1.55;
+}
+
+/* Card wrapper with top glow line */
+.cardWrap {
+  position: relative;
+  margin-top: 22px;
+}
+
+.cardWrap::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -10px;
+  transform: translateX(-50%);
+  width: min(780px, 92%);
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(212,140,58,0.9), transparent);
+  filter: blur(0.2px);
+  opacity: 0.9;
+}
+
+.card {
+  border-radius: 22px;
+  border: 1px solid rgba(212, 140, 58, 0.35);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.09),
+    rgba(255, 255, 255, 0.03)
+  );
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.45),
+    0 0 0 1px rgba(255, 255, 255, 0.03) inset;
+  backdrop-filter: blur(10px);
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+/* AntD Card inner padding */
+.card :global(.ant-card-body) {
+  padding: 44px 44px 36px;
+}
+
+/* ===== Custom Flow ===== */
+.flowGrid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.flowCard {
+  position: relative;
+  padding: 26px 24px 22px;
+  border-radius: 18px;
+  background: rgba(20, 20, 20, 0.55);
+  border: 1px solid rgba(212, 140, 58, 0.22);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  text-align: left;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.flowCard::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(212, 140, 58, 0.08), transparent 60%);
+  pointer-events: none;
+}
+
+.flowCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 22px 44px rgba(0, 0, 0, 0.32);
+  border-color: rgba(212, 140, 58, 0.3);
+}
+
+.stepHeader {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 12px;
+  min-height: 44px;
+}
+
+.stepBadge {
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  color: #fff;
+  background: var(--amber, #d48c3a);
+  box-shadow: 0 10px 20px rgba(212, 140, 58, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  flex: 0 0 auto;
+}
+
+.stepTitle {
+  margin: 0;
+  font-size: 1.12rem;
+  font-weight: 800;
+  color: rgba(226, 163, 88, 0.98);
+  line-height: 1.2;
+}
+
+.stepBody {
+  margin: 0;
+  color: rgba(222, 226, 230, 0.95);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+/* CTA buttons row */
+.ctaRow {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 22px;
+  flex-wrap: wrap;
+}
+
+.primaryBtn {
+  background: var(--amber, #d48c3a) !important;
+  border-color: rgba(212, 140, 58, 0.9) !important;
+  color: #fff !important;
+  height: 46px;
+  padding: 0 24px;
+  border-radius: 12px;
+  font-weight: 800;
+  box-shadow: 0 10px 25px rgba(212, 140, 58, 0.18);
+}
+
+.secondaryBtn {
+  height: 46px;
+  padding: 0 24px;
+  border-radius: 12px;
+  background: transparent !important;
+  border: 1px solid rgba(191, 195, 199, 0.35) !important;
+  color: rgba(191, 195, 199, 0.95) !important;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .flowGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .flowGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 34px 16px 70px;
+  }
+
+  .flowGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .card :global(.ant-card-body) {
+    padding: 22px 18px;
+  }
+}

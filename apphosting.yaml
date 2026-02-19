@@ -1,0 +1,76 @@
+env:
+  - variable: NEXT_PUBLIC_APP_URL
+    value: "https://iron-leaf.ca"
+    availability: [ BUILD, RUNTIME ]
+
+  - variable: NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
+    value: "pk_live_51Sstb9CmXH90Tjj81xGkbw7ZkQyTp36if3AX2g40PjEiRbyODuhewrrWVvqF0qihZYfq1APDDDNHmIhUHVyVgASI00CUgsjC5E"
+    availability: [BUILD, RUNTIME]
+
+  - variable: NEXT_PUBLIC_FIREBASE_API_KEY
+    value: "AIzaSyCArKuNwgLAOFfwpQLZ_X5Dgd7EQgV6Zmc"
+    availability: [ BUILD, RUNTIME ]
+
+  - variable: NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN
+    value: "iron-leaf.firebaseapp.com"
+    availability: [ BUILD, RUNTIME ]
+
+  - variable: NEXT_PUBLIC_FIREBASE_PROJECT_ID
+    value: "iron-leaf"
+    availability: [ BUILD, RUNTIME ]
+
+  - variable: NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET
+    value: "iron-leaf.firebasestorage.app"
+    availability: [ BUILD, RUNTIME ]
+
+  - variable: NEXT_PUBLIC_FIREBASE_APP_ID
+    value: "1:124706414941:web:c6a0baacdf137c3946c8b4"
+    availability: [ BUILD, RUNTIME ]
+
+  - variable: NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
+    value: "G-EB8B744D9V"
+    availability: [ BUILD, RUNTIME ]
+
+  - variable: NEXT_PUBLIC_META_PIXEL_ID
+    value: "1391432315574568"
+    availability: [ BUILD, RUNTIME ]
+
+  - variable: META_PIXEL_ID
+    value: "1391432315574568"
+    availability: [ BUILD, RUNTIME ]
+
+  - variable: META_ACCESS_TOKEN
+    secret: META_ACCESS_TOKEN
+    availability: [ BUILD, RUNTIME ]
+
+  - variable: STRIPE_SECRET_KEY
+    secret: STRIPE_SECRET_KEY
+    availability: [ BUILD, RUNTIME ]
+
+  - variable: STRIPE_WEBHOOK_SECRET
+    secret: STRIPE_WEBHOOK_SECRET
+    availability: [ BUILD, RUNTIME ]
+
+  - variable: SMTP_HOST
+    secret: SMTP_HOST
+    availability: [ BUILD, RUNTIME ]
+
+  - variable: SMTP_PORT
+    secret: SMTP_PORT
+    availability: [ BUILD, RUNTIME ]
+
+  - variable: SMTP_USER
+    secret: SMTP_USER
+    availability: [ BUILD, RUNTIME ]
+
+  - variable: SMTP_PASS
+    secret: SMTP_PASS
+    availability: [ BUILD, RUNTIME ]
+
+  - variable: CONTACT_FROM_EMAIL
+    secret: CONTACT_FROM_EMAIL
+    availability: [ BUILD, RUNTIME ]
+    
+  - variable: CONTACT_TO_EMAIL
+    secret: CONTACT_TO_EMAIL
+    availability: [BUILD, RUNTIME]
