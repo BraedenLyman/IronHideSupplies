@@ -20,7 +20,6 @@ export default function Header() {
   const navItems: NavItem[] = useMemo(
     () => [
       { href: "/", label: "Home", match: "exact" },
-      { href: "/how-it-works", label: "How it works", match: "startsWith" },
       { href: "/shop", label: "Shop", match: "startsWith" },
       /*{ href: "/about", label: "About", match: "startsWith"}, */
       { href: "/contact", label: "Contact", match: "startsWith" },
@@ -40,8 +39,8 @@ export default function Header() {
       <div className={styles.inner}>
         <Link href="/" className={styles.brand} aria-label="Go to homepage" onClick={closeMenu}>
           <Image
-            src="/logo/IronLeafLogo.png"
-            alt="IronLeaf Engraving Logo"
+            src="/logo/IronHideLogo.png"
+            alt="IronHide Logo"
             width={280}
             height={90}
             priority

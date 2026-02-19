@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="public/logo/IronLeafLogo.png" height="500px" width="500px" />
+  <img src="public/logo/IronHideLogo.png" height="500px" width="500px" />
 </div>
 
 <div align="center">

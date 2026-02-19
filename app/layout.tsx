@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   title: "Iron Hide Supplies",
   description: "",
   icons: {
-    icon: "/favicon/IronLeafFav.ico",
+    icon: "/favicon/ironHideFav.ico",
   },
 };
 
@@ -55,7 +55,7 @@ export default function RootLayout({
             </Script>
           </>
         ) : null}
-        {metaPixelId ? (
+        {/* {metaPixelId ? (
           <Script id="meta-pixel-init" strategy="beforeInteractive">
             {`
               !function(f,b,e,v,n,t,s)
@@ -70,10 +70,13 @@ export default function RootLayout({
               fbq('track', 'PageView');
             `}
           </Script>
-        ) : null}
+        ) : null} */}
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        {metaPixelId ? (
+      <body
+        suppressHydrationWarning
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        {/* {metaPixelId ? (
           <noscript>
             <img
               height="1"
@@ -83,10 +86,10 @@ export default function RootLayout({
               alt=""
             />
           </noscript>
-        ) : null}
+        ) : null} */}
         <CartProvider>
           <Suspense fallback={null}>
-            <AnalyticsTracker measurementId={measurementId} metaPixelId={metaPixelId} />
+            <AnalyticsTracker measurementId={measurementId} /* metaPixelId={metaPixelId} */ />
           </Suspense>
           {children}
         </CartProvider>

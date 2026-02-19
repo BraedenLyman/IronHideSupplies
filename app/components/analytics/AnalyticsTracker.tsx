@@ -16,7 +16,7 @@ export function AnalyticsTracker({
   metaPixelId,
 }: {
   measurementId: string;
-  metaPixelId: string;
+  metaPixelId?: string;
 }) {
   const pathname = usePathname();
   const searchParams = useSearchParams();

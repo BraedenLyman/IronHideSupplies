@@ -13,11 +13,11 @@ const { Text } = Typography;
 
 export default function Hero() {
   return (
-    <section className={styles.hero} aria-label="IronLeaf hero">
+    <section className={styles.hero} aria-label="IronHide hero">
       {/* Background Image */}
       <Image
-        src="/hero/IronLeafHero.png"
-        alt="IronLeaf Hero Image - Home Page"
+        src="/hero/bg.png"
+        alt="IronHide Hero Image - Home Page"
         fill
         priority
         sizes="100vw"

@@ -10,8 +10,8 @@ export default function Footer() {
       <div className={styles.inner}>
         <Link href="/" className={styles.brand} aria-label="Go to homepage">
           <Image
-            src="/logo/IronLeafLogo.png"
-            alt="IronLeaf Engraving Logo"
+            src="/logo/IronHideLogo.png"
+            alt="IronHide Logo"
             width={280}
             height={90}
             className={styles.logo}
@@ -22,7 +22,6 @@ export default function Footer() {
           <div className={styles.col}>
             <h3 className={styles.title}>Website</h3>
             <Link href="/" className={styles.link}>Home</Link>
-            <Link href="/how-it-works" className={styles.link}>How it works</Link>
             <Link href="/shop" className={styles.link}>Shop</Link>
           </div>
 
@@ -42,7 +41,7 @@ export default function Footer() {
       </div>
 
       <div className={styles.credit}>
-        © 2026 IronLeaf Engravings. All rights reserved.
+        © 2026 Ironhide Supplies. All rights reserved.
       </div>
     </footer>
   );
