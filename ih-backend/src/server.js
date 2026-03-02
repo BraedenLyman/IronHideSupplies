@@ -2,12 +2,15 @@
 
 const express = require('express');
 const cors = require('cors');
+const fs = require('fs');
+const path = require('path');
 const connectDB = require('./config/db');
 const apiRoutes = require('./routes');
 
 const app = express();
 const port = process.env.PORT || 5000;
 const dbRetryDelayMs = Number(process.env.DB_RETRY_DELAY_MS || 5000);
+const frontendDistPath = path.resolve(__dirname, '../../ih-frontend/dist');
 
 let dbConnected = false;
 
@@ -20,6 +23,13 @@ app.get('/health', (_req, res) => {
   });
 });
 app.use('/api', apiRoutes);
+
+if (fs.existsSync(frontendDistPath)) {
+  app.use(express.static(frontendDistPath));
+  app.get(/^\/(?!api(?:\/|$)|health$).*/, (_req, res) => {
+    res.sendFile(path.join(frontendDistPath, 'index.html'));
+  });
+}
 
 async function connectDbWithRetry() {
   try {

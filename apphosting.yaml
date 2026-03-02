@@ -3,3 +3,6 @@ env:
     secret: MONGODB_URI
   - variable: DB_RETRY_DELAY_MS
     value: "5000"
+scripts:
+  buildCommand: npm run build
+  runCommand: npm run start
