@@ -1,0 +1,25 @@
+{
+  "name": "ironhidesupplies",
+  "version": "1.0.0",
+  "description": "IronHide Supplies MERN starter monorepo",
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix ih-backend\" \"npm run dev --prefix ih-frontend\"",
+    "dev:backend": "npm run dev --prefix ih-backend",
+    "dev:frontend": "npm run dev --prefix ih-frontend",
+    "install:all": "npm install --prefix ih-backend && npm install --prefix ih-frontend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BraedenLyman/IronHideSupplies.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BraedenLyman/IronHideSupplies/issues"
+  },
+  "homepage": "https://github.com/BraedenLyman/IronHideSupplies#readme",
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

@@ -1,0 +1,4 @@
+node_modules/
+ih-frontend/node_modules/
+ih-backend/node_modules/
+ih-backend/.env
