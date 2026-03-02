@@ -1,3 +1,3 @@
-﻿env:
+env:
   - variable: VITE_API_BASE_URL
-    value: "https://ih-backend--iron-hide-bb5d8.us-east4.hosted.app/""
+    value: "https://iron-hide--iron-hide-bb5d8.us-east4.hosted.app"

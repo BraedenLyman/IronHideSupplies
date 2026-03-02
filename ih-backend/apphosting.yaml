@@ -1,4 +1,4 @@
-﻿env:
+env:
   - variable: MONGODB_URI
     secret: MONGODB_URI
   - variable: DB_RETRY_DELAY_MS
