@@ -1,35 +1,29 @@
-﻿import { useEffect, useState } from 'react'
 import './App.css'
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import Shop from "./pages/Shop";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 
 function App() {
-  const [status, setStatus] = useState('Loading...')
-
-  useEffect(() => {
-    const baseUrl = import.meta.env.VITE_API_BASE_URL || ''
-
-    fetch(`${baseUrl}/api/message`)
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error(`Request failed with status ${res.status}`)
-        }
-        return res.json()
-      })
-      .then((data) => {
-        setStatus(data.message)
-      })
-      .catch((error) => {
-        setStatus(`Unable to reach backend: ${error.message}`)
-      })
-  }, [])
-
   return (
-    <main className="app">
-      <h1>IronHide Supplies MERN Starter</h1>
-      <p className="status">{status}</p>
-      <p className="hint">
-        Frontend: <code>ih-frontend</code> | Backend: <code>ih-backend</code>
-      </p>
-    </main>
+    <BrowserRouter>
+      <div className="page">
+        <Header />
+        <main className="page-content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/shop" element={<Shop />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </BrowserRouter>
   )
 }
 
